@@ -11,6 +11,7 @@
 #include <rtm/CorbaNaming.h>
 #include <hrpModel/ModelLoaderUtil.h>
 #include <hrpUtil/MatrixSolvers.h>
+#include <Eigen/Geometry>
 
 // Module specification
 // <rtc-template block="module_spec">

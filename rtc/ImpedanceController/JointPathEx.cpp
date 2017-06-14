@@ -4,6 +4,8 @@
 #include <limits.h>
 #include <float.h>
 #include <hrpUtil/MatrixSolvers.h>
+#include <Eigen/Core>
+#include <Eigen/Geometry>
 
 #define deg2rad(x)((x)*M_PI/180)
 #define rad2deg(rad) (rad * 180 / M_PI)

@@ -6,6 +6,8 @@
 #include <cstdio>
 #include <iostream>
 #include "hrpsys/util/Hrpsys.h" // added for QNX compile
+#include <Eigen/Core>
+#include <Eigen/Geometry>
 
 class testZMPDistributor
 {

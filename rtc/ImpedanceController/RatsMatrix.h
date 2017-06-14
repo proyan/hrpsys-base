@@ -1,5 +1,6 @@
 #ifndef RATSMATRIX_H
 #define RATSMATRIX_H
+#include <Eigen/Geometry>
 #include <hrpUtil/Eigen3d.h>
 #include <iostream>
 

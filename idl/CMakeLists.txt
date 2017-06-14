@@ -104,7 +104,7 @@ endif()
 
 set(target hrpsysBaseStub)
 add_library(${target} SHARED ${sources})
-target_link_libraries(${target} ${OPENRTM_LIBRARIES})
+target_link_libraries(${target} ${OPENRTM_LIBRARIES} coil)
 
 install(TARGETS ${target}
 	LIBRARY DESTINATION lib
@@ -120,7 +120,7 @@ foreach(_idl_file ${idl_files})
   endif()
 endforeach()
 foreach(_idl_file ${openhrp_idl_files})
-  message("Check if ${OPENHRP_IDL_DIR}/OpenHRP/${_idl_file} exists")
+  message("Check if ${OPENHRP_IDL_DIR}/${_idl_file} exists")
   if(NOT EXISTS ${OPENHRP_IDL_DIR}/OpenHRP/${_idl_file})
     message(FATAL_ERROR "ERROR: ${OPENHRP_IDL_DIR}/OpenHRP/${_idl_file} is not present")
   endif()

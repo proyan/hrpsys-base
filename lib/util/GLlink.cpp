@@ -12,6 +12,8 @@
 #include "GLcamera.h"
 #include "GLlink.h"
 #include "GLshape.h"
+#include <Eigen/Geometry>
+#include <Eigen/Core>
 
 using namespace OpenHRP;
 using namespace hrp;

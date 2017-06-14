@@ -18,6 +18,7 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <Eigen/Geometry>
 
 void xmlTextWriterWriteProperty(const xmlTextWriterPtr writer, const std::string name, const std::string value) {
   xmlTextWriterStartElement(writer, BAD_CAST "property");
@@ -103,7 +104,7 @@ int main (int argc, char** argv)
       xmlTextWriterEndElement(writer); // item
       // default WAIST offset
       hrp::Vector3 WAIST_offset_pos = hrp::Vector3::Zero();
-      Eigen::AngleAxis<double> WAIST_offset_rot = Eigen::AngleAxis<double>(0, hrp::Vector3(0,0,1)); // rotation in VRML is represented by axis + angle
+      Eigen::AngleAxis<double> WAIST_offset_rot(0, hrp::Vector3(0,0,1)); // rotation in VRML is represented by axis + angle
       for (std::vector<std::string>::iterator it = inputs.begin();
 	   it != inputs.end();
 	   it++) {
@@ -232,7 +233,7 @@ int main (int argc, char** argv)
 	   << body->rootLink()->p[2] + WAIST_offset_pos(2); // 10cm margin
 	xmlTextWriterWriteProperty(writer, root_name+".translation", os.str());
         os.str(""); // reset ostringstream
-        Eigen::AngleAxis<double> tmpAA = Eigen::AngleAxis<double>(hrp::Matrix33(body->rootLink()->R * WAIST_offset_rot.toRotationMatrix()));
+        Eigen::AngleAxis<double> tmpAA(hrp::Matrix33(body->rootLink()->R * WAIST_offset_rot.toRotationMatrix()));
         os << tmpAA.axis()(0) << " "
            << tmpAA.axis()(1) << " "
            << tmpAA.axis()(2) << " "

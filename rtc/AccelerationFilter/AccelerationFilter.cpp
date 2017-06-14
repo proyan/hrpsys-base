@@ -5,6 +5,7 @@
  * $Id$ 
  */
 #include "AccelerationFilter.h"
+#include <Eigen/Geometry>
 
 typedef coil::Guard<coil::Mutex> Guard;
 // Module specification

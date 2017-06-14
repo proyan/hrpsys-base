@@ -1,5 +1,7 @@
 #include "IIRFilter.h"
 #include <numeric>
+#include <Eigen/Core>
+#include <Eigen/Geometry>
 
 IIRFilter::IIRFilter(unsigned int dim, std::vector<double>& fb_coeffs, std::vector<double>& ff_coeffs, const std::string& error_prefix)
 {

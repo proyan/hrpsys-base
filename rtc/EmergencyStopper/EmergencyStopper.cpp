@@ -18,6 +18,7 @@
 #include "EmergencyStopper.h"
 #include <iomanip>
 
+
 typedef coil::Guard<coil::Mutex> Guard;
 
 // Module specification

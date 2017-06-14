@@ -5,6 +5,7 @@
 #include <hrpUtil/EigenTypes.h>
 #include <iostream>
 #include "hrpsys/util/Hrpsys.h"
+#include <Eigen/Geometry>
 
 namespace hrp{
   typedef Eigen::Matrix<double, 7, 7> Matrix77;

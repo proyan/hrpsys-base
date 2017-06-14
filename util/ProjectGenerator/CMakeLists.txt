@@ -1,6 +1,6 @@
 include_directories(${LIBXML2_INCLUDE_DIR})
 add_executable(ProjectGenerator ProjectGenerator.cpp)
-target_link_libraries(ProjectGenerator ${OPENHRP_LIBRARIES} ${LIBXML2_LIBRARIES})
+target_link_libraries(ProjectGenerator ${OPENHRP_LIBRARIES} ${LIBXML2_LIBRARIES} coil ${OPENRTM_LIBRARIES})
 
 set(target ProjectGenerator)
 

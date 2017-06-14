@@ -1,7 +1,7 @@
 set(OPENHRP_FOUND TRUE)
 
 execute_process(
-  COMMAND pkg-config --modversion openhrp3.1
+  COMMAND pkg-config --modversion openhrp3-simulator-wo-rtm
   OUTPUT_VARIABLE OPENHRP_VERSION
   RESULT_VARIABLE RESULT
   OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -11,7 +11,7 @@ if(NOT RESULT EQUAL 0)
 endif()
 
 execute_process(
-  COMMAND pkg-config --variable=prefix openhrp3.1
+  COMMAND pkg-config --variable=prefix openhrp3-simulator-wo-rtm
   OUTPUT_VARIABLE OPENHRP_DIR
   RESULT_VARIABLE RESULT
   OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -21,7 +21,7 @@ if(NOT RESULT EQUAL 0)
 endif()
 
 execute_process(
-  COMMAND pkg-config --cflags openhrp3.1
+  COMMAND pkg-config --cflags openhrp3-simulator-wo-rtm
   OUTPUT_VARIABLE OPENHRP_CXX_FLAGS
   RESULT_VARIABLE RESULT
   OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -33,7 +33,7 @@ else()
 endif()
 
 execute_process(
-  COMMAND pkg-config --cflags-only-I openhrp3.1
+  COMMAND pkg-config --cflags-only-I openhrp3-simulator-wo-rtm
   OUTPUT_VARIABLE OPENHRP_INCLUDE_DIRS
   RESULT_VARIABLE RESULT
   OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -45,7 +45,7 @@ else()
 endif()
 
 execute_process(
-  COMMAND pkg-config --libs openhrp3.1
+  COMMAND pkg-config --libs openhrp3-simulator-wo-rtm
   OUTPUT_VARIABLE OPENHRP_LIBRARIES
   RESULT_VARIABLE RESULT
   OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -65,7 +65,7 @@ if(NOT OPENHRP_FOUND)
 endif()
 
 execute_process(
-  COMMAND pkg-config --variable=idl_dir openhrp3.1
+  COMMAND pkg-config --variable=idl_dir openhrp3-simulator-wo-rtm
   OUTPUT_VARIABLE OPENHRP_IDL_DIR
   RESULT_VARIABLE RESULT
   OUTPUT_STRIP_TRAILING_WHITESPACE)

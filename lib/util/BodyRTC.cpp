@@ -3,6 +3,8 @@
 #include <hrpModel/Link.h>
 #include "BodyRTC.h"
 #include "PortHandler.h"
+#include <Eigen/Core>
+#include <Eigen/Geometry>
 
 using namespace hrp;
 using namespace RTC;

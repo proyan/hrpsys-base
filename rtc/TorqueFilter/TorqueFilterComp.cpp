@@ -11,7 +11,8 @@
 #include <iostream>
 #include <string>
 #include "TorqueFilter.h"
-
+#include <Eigen/Core>
+#include <Eigen/Geometry>
 
 void MyModuleInit(RTC::Manager* manager)
 {
